@@ -5,13 +5,14 @@ import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
 
 // 引入组件
-import squi from '../packages'
+import YkjH5Ui from '../packages'
 import DemoBlock from './components/DemoBlock.vue'
 
 Vue.config.productionTip = false
 import './assets/common.scss' // 公共样式
+import './assets/antd.css';
 
-Vue.use(squi)
+Vue.use(YkjH5Ui)
 Vue.component('DemoBlock', DemoBlock)
 
 router.afterEach(() => {
@@ -21,7 +22,6 @@ router.afterEach(() => {
   })
 })
 
-Vue.use(squi)
 new Vue({
   router,
   render: h => h(App)

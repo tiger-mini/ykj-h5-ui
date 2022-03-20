@@ -6,33 +6,27 @@ import navConfig from './routerCon'
 
 Vue.use(Router)
 const docsRoutefun = navConfig => {
-  const route = []
-  navConfig.forEach(item => {
-    if (item.groups) {
-      item.groups.forEach(group => {
-        group.list.forEach(nav => {
-          route.push({
-            path: nav.path,
-            name: nav.name,
-            component: r =>
-              require.ensure([], () => r(require(`@/docs${nav.path}.md`)))
-          })
-        })
-      })
-    } else {
+  const route = [{
+    path: "/preface",
+    name: "组件总览",
+    component: r => require.ensure([], () => r(require(`@/docs/preface.md`)))
+  }];
+  navConfig.groups.forEach(group => {
+    group.list.forEach(nav => {
       route.push({
-        path: item.path,
-        name: item.name,
+        path: nav.path,
+        name: nav.name,
         component: r =>
-          require.ensure([], () => r(require(`@/docs${item.path}.md`)))
+          require.ensure([], () => r(require(`@/docs${nav.path}.md`)))
       })
-    }
+    })
   })
+
   return route
 }
 const docsRoute = docsRoutefun(navConfig)
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [{ path: '/', redirect: '/preface' }, ...docsRoute]
 })

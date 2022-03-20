@@ -1,5 +1,6 @@
 import YkjH5UiIcon from './YkjH5UiIcon/src/YkjH5UiIcon'
 import YkjH5UiCardInput from './YkjH5UiCardInput/src/YkjH5UiCardInput'
+
 // 所有组件列表
 const components = [YkjH5UiIcon, YkjH5UiCardInput];
 // 定义install方法，接收Vue作为参数

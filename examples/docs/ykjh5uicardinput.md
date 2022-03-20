@@ -3,6 +3,6 @@
 
 :::demo
 ```html
-<ykj-h5-ui-card-input @change='handleChange' />
+<ykj-h5-ui-card-input @change='(vaule)=>console.log(`Card Number:${value}`)' />
 ```
 

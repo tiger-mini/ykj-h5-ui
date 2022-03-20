@@ -1,40 +1,29 @@
 <template>
   <div id='app'>
-    <!-- header -->
-    <div class='header'>
-      <div class='logo'>
-        <Logo />
-      </div>
-<!--      <button class='toGithub' @click='toGithub'>View on GitHub</button>-->
-    </div>
-    <div class='main'>
-      <!-- sidebar -->
-      <div class='sidebar'>
+    <logo/>
+    <div class='main-wrapper'>
+      <div class="ant-row" style="row-gap: 0px;">
         <nav-side :data='navsData'></nav-side>
-      </div>
-      <div class='view page-container'>
-<!--        <ykj-h5-ui-card-input class='xxxxx' @change='handleCardChange' />-->
-<!--        <ykj-h5-ui-icon name='iconicn_m_item' :style="{'font-size': '88px'}"></ykj-h5-ui-icon>-->
-        <router-view></router-view>
+        <div class='ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-18 ant-col-xl-19 ant-col-xxl-20'>
+          <section class='main-container'>
+            <section class='class="markdown"'>
+              <router-view></router-view>
+            </section>
+          </section>
+        </div>
       </div>
     </div>
-    <!-- footer -->
-    <!-- <div class="footer"></div> -->
   </div>
 </template>
 <script>
 import Logo from './components/Logo'
 import navSide from './components/menuCom'
 import navsData from './router/routerCon.json'
-// import YkjH5UiIcon from '../packages/YkjH5UiIcon/src/YkjH5UiIcon'
-// import YkjH5UiCardInput from '../packages/YkjH5UiCardInput/src/YkjH5UiCardInput'
 
 export default {
   components: {
     Logo,
-    navSide,
-    // YkjH5UiIcon,
-    // YkjH5UiCardInput
+    navSide
   },
   data() {
     return {
