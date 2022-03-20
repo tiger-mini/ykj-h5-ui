@@ -1,0 +1,21 @@
+[
+  {
+    "name": "写在前面",
+    "path": "/preface",
+    "title": "写在前面"
+  },
+  {
+    "name": "components",
+    "groups": [
+      {
+        "groupName": "基础组件",
+        "list": [
+          {
+            "path": "/ykjh5uicardinput",
+            "title": "银行卡号输入框"
+          }
+        ]
+      }
+    ]
+  }
+]
