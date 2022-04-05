@@ -10,7 +10,7 @@ import DemoBlock from './components/DemoBlock.vue'
 
 Vue.config.productionTip = false
 import './assets/common.scss' // 公共样式
-import './assets/antd.css';
+import './assets/antd.css'
 
 Vue.use(YkjH5Ui)
 Vue.component('DemoBlock', DemoBlock)
