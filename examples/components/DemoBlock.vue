@@ -1,28 +1,28 @@
 <template>
-  <div class="demo-block" :class="blockClass">
+  <div class='demo-block' :class='blockClass'>
     <!-- 源码运行 -->
-    <div class="source">
-      <slot name="source"></slot>
+    <div class='source'>
+      <slot name='source'></slot>
     </div>
     <!-- 源码 -->
-    <div class="meta" ref="meta">
+    <div class='meta' ref='meta'>
       <!-- 描述 -->
-      <div class="description" v-if="$slots.default">
+      <div class='description' v-if='$slots.default'>
         <slot></slot>
       </div>
       <!-- 源码 -->
-      <div class="highlight">
-        <slot name="highlight"></slot>
+      <div class='highlight'>
+        <slot name='highlight'></slot>
       </div>
     </div>
     <!-- 源码 显示或者隐藏 -->
     <div
-      class="demo-block-control"
-      ref="control"
+      class='demo-block-control'
+      ref='control'
       :class="{ 'is-fixed': fixedControl }"
-      @click="isExpanded = !isExpanded"
+      @click='isExpanded = !isExpanded'
     >
-      <transition name="text-slide">
+      <transition name='text-slide'>
         <span>{{ controlText }}</span>
       </transition>
     </div>
@@ -79,27 +79,42 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang='scss'>
 .demo-block {
-  width: 60%;
-  padding: 8px 16px;
+  width: 100%;
   margin: auto;
   margin-top: 10px;
-  border-left: solid 5px#fc297f;
-  background-color: #f8d1db;
-  border-radius: 3px;
+  border: 1px solid #ebebeb;
   transition: 0.2s;
+
   &.hover {
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
-      0 2px 4px 0 rgba(232, 237, 250, 0.5);
+    0 2px 4px 0 rgba(232, 237, 250, 0.5);
   }
+
+  .source {
+    padding: 8px 16px;
+  }
+
   .meta {
-    margin-top: 10px;
-    background-color: #fafafa;
-    border-radius: 8px;
     overflow: hidden;
     height: 0;
     transition: height 0.2s;
+    background-color: #fafafa;
+
+    .hljs {
+      padding: 10px 0;
+      background-color: #fafafa;
+      border-radius: 0;
+      border: none;
+    }
+
+    .highlight {
+      padding: 0 16px;
+      pre code {
+        background-color: #fafafa;
+      }
+    }
   }
 
   .description {
@@ -109,20 +124,19 @@ export default {
     line-height: 22px;
     color: #666;
     word-break: break-word;
-    margin: 10px;
     background-color: #fff;
+
     p {
       width: 100%;
     }
   }
+
   .demo-block-control {
     border-top: solid 1px #eaeefb;
     height: 44px;
     box-sizing: border-box;
     background-color: #fff;
-    border-radius: 8px;
     text-align: center;
-    margin-top: 10px;
     color: #d3dce6;
     cursor: pointer;
     position: relative;
@@ -137,6 +151,7 @@ export default {
       font-size: 16px;
       line-height: 44px;
       transition: 0.3s;
+
       &.hovering {
         transform: translateX(-40px);
       }
@@ -152,7 +167,7 @@ export default {
     }
 
     &:hover {
-      color: #fc297f;
+      color: #409EFF;
       background-color: #f9fafc;
     }
 
