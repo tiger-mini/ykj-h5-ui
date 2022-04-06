@@ -5,14 +5,17 @@
       "list": [
         {
           "path": "/ykjh5uicardinput",
+          "name": "银行卡号输入框",
           "title": "银行卡号输入框"
         },
         {
           "path": "/ykjh5uiphonenumber",
+          "name": "手机号输入框",
           "title": "手机号输入框"
         },
         {
           "path": "/ykjh5uiicon",
+          "name": "svg字体图标",
           "title": "svg字体图标"
         }
       ]

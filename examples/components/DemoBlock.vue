@@ -188,4 +188,36 @@ export default {
     }
   }
 }
+
+table {
+  width: 100%;
+  margin: 8px 0 16px;
+  direction: ltr;
+  empty-cells: show;
+  border: 1px solid rgba(0,0,0,.06);
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th {
+    color: #5c6b77;
+    font-weight: 500;
+    white-space: nowrap;
+    background: rgba(0,0,0,.02)
+  }
+
+  th,td {
+    padding: 16px 24px;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,.06)
+  }
+
+  td>a:not(:last-child) {
+    margin-right: 0!important
+  }
+
+  td>a:not(:last-child):after {
+    position: relative!important
+  }
+
+}
 </style>

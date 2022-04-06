@@ -25,8 +25,16 @@ const docsRoutefun = navConfig => {
   return route
 }
 const docsRoute = docsRoutefun(navConfig)
-export default new Router({
+const router = new Router({
   mode: 'hash',
   base: process.env.BASE_URL,
   routes: [{ path: '/', redirect: '/preface' }, ...docsRoute]
-})
+});
+
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.name} - Ykj UI Design`
+  next();
+});
+
+export default router;
