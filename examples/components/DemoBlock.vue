@@ -82,8 +82,8 @@ export default {
 <style lang='scss'>
 .demo-block {
   width: 100%;
-  margin: auto;
   margin-top: 10px;
+  margin-bottom: 40px;
   border: 1px solid #ebebeb;
   transition: 0.2s;
 

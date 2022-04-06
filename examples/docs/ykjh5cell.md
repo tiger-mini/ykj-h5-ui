@@ -1,15 +1,26 @@
-## 展示框
+## Cell 单元格
+
+单元格为列表中的单个展示项。
+<br/>
+<br/>
+<br/>
+
+### 基础
+
+只给title和name值
 
 :::demo
-```
-<ykj-h5-cell title="单元格" content="内容" bordered is-link />
+```html
+<ykj-h5-cell title="单元格" content="内容" />
 ```
 :::
 
-
-<br/>
-<br/>
-<br/>
+### 进阶
+:::demo
+```html
+<ykj-h5-cell title="单元格" content="内容" bordered />
+```
+:::
 
 ## API
 
