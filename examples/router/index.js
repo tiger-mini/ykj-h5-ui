@@ -26,7 +26,7 @@ const docsRoutefun = navConfig => {
 }
 const docsRoute = docsRoutefun(navConfig)
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [{ path: '/', redirect: '/preface' }, ...docsRoute]
 })
