@@ -24,16 +24,9 @@
       "groupName": "布局",
       "list": [
         {
-          "path": "/ykjh5uicardinput23",
-          "title": "银行卡号输入框"
-        },
-        {
-          "path": "/ykjh5uiphonenumber4",
-          "title": "手机号输入框"
-        },
-        {
-          "path": "/ykjh5uiicon5",
-          "title": "svg字体图标"
+          "path": "/ykjh5cell",
+          "name": "Cell 单元格",
+          "title": "Cell 单元格"
         }
       ]
     }
