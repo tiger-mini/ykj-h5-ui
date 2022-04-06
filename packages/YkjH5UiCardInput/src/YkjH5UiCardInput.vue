@@ -1,6 +1,6 @@
 <template>
   <input
-    class='ykj-h5-ui-card-input'
+    class='ykj-h5-ui-input'
     v-model='card'
     @input='onInput'
     @keyup='onInput'
@@ -32,21 +32,5 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-.ykj-h5-ui-card-input {
-  -webkit-appearance: none;
-  background-color: #fff;
-  background-image: none;
-  border-radius: 4px;
-  border: 1px solid #dcdfe6;
-  box-sizing: border-box;
-  color: #606266;
-  display: inline-block;
-  font-size: inherit;
-  height: 40px;
-  line-height: 1;
-  outline: none;
-  padding: 0 15px;
-  transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
-  width: 100%;
-}
+
 </style>

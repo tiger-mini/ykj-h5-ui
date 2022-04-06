@@ -1,8 +1,11 @@
 import YkjH5UiIcon from './YkjH5UiIcon/src/YkjH5UiIcon'
 import YkjH5UiCardInput from './YkjH5UiCardInput/src/YkjH5UiCardInput'
+import YkjH5UiPhoneNumber from './YkjH5UiPhoneNumber'
+
+import './index.scss'
 
 // 所有组件列表
-const components = [YkjH5UiIcon, YkjH5UiCardInput];
+const components = [YkjH5UiIcon, YkjH5UiCardInput, YkjH5UiPhoneNumber];
 // 定义install方法，接收Vue作为参数
 const install = function(Vue) {
   // 判断是否安装，安装过就不继续往下执行

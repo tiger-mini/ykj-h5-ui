@@ -1,10 +1,20 @@
 <template>
-  <input v-model="number" type="tel" ref="mobile" maxlength="13" @input="onCallInput" @keyup="onCallInput" @paste="onCallInput" />
+  <input
+    class='ykj-h5-ui-input'
+    v-model='number'
+    type='tel'
+    ref='mobile'
+    maxlength='13'
+    @input='onCallInput'
+    @keyup='onCallInput'
+    @paste='onCallInput'
+    placeholder='请输入手机号码'
+  />
 </template>
 
 <script>
 export default {
-  name: "YkjH5UiPhoneNumber",
+  name: 'YkjH5UiPhoneNumber',
   props: {
     change: Function
   },
@@ -24,7 +34,7 @@ export default {
         value = value.replace(/^(\d{3})(\d{4})/g, '$1 $2 ')
       }
       this.number = value
-      this.change && this.change(value);
+      this.change && this.change(value)
     }
   }
 }

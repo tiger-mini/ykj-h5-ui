@@ -1,5 +1,5 @@
 <template>
-  <span role='img' class='ykj-h5-ui-icon' :class='className' :style='style'>
+  <span role='img' class='ykj-h5-ui-icon' :class='className' :style='styleObj'>
     <svg width='1em' height='1em' fill='currentColor' aria-hidden='true' focusable='false'>
       <use v-bind:xlink:href="getName(name)"></use>
     </svg>
@@ -20,7 +20,7 @@ export default {
       default: '',
       require: false
     },
-    style: {
+    styleObj: {
       type: Object,
       require: false
     }
