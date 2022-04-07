@@ -27,6 +27,11 @@
           "path": "/ykjh5cell",
           "name": "Cell 单元格",
           "title": "Cell 单元格"
+        },
+        {
+          "path": "/ykjh5clipboard",
+          "name": "复制",
+          "title": "复制"
         }
       ]
     }

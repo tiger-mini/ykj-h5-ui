@@ -1,5 +1,5 @@
 <template>
-  <span role='img' class='ykj-h5-ui-icon' :class='className' :style='styleObj'>
+  <span role='img' class='ykj-h5-ui-icon' :class='className' :title='title' :style='styleObj' @click='handleClick'>
     <svg width='1em' height='1em' fill='currentColor' aria-hidden='true' focusable='false'>
       <use v-bind:xlink:href="getName(name)"></use>
     </svg>
@@ -23,11 +23,20 @@ export default {
     styleObj: {
       type: Object,
       require: false
+    },
+    title: {
+      type: String,
+    },
+    click: {
+      type: Function
     }
   },
   methods: {
     getName(iconName) {
       return `#${iconName}`
+    },
+    handleClick() {
+      this.click && this.click();
     }
   }
 }

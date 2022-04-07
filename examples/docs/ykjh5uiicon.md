@@ -19,8 +19,9 @@
 ### Icon props
 
 | 参数  | 说明 | 类型 | 默认 |
-| ------------- | ------------- | ---- | ---- |
-| name  | icon名称 |  string    | - |
-| className  | class名称 |  string    | - |
+| ---- | ------------- | ---------- | - |
+| name | icon名称       |  string    | - |
+| className | class名称 |  string    | - |
 | styleObj  | style对象 |  object    | - |
-
+| title  | 鼠标放上去后title的提示内容 |  string | - |
+| click  | 点击事件 |  function | - |
