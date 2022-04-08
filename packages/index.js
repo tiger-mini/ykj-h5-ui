@@ -3,11 +3,12 @@ import YkjH5UiCardInput from './YkjH5UiCardInput/src/YkjH5UiCardInput'
 import YkjH5UiPhoneNumber from './YkjH5UiPhoneNumber'
 import YkjH5Cell from './YkjH5Cell/index';
 import YkjH5ClipBoard from './YkjH5ClipBoard';
+import YkjH5PreviewPdf from './YkjH5PreviewPdf';
 
 import './index.scss'
 
 // 所有组件列表
-const components = [YkjH5UiIcon, YkjH5UiCardInput, YkjH5UiPhoneNumber,YkjH5Cell, YkjH5ClipBoard];
+const components = [YkjH5UiIcon, YkjH5UiCardInput, YkjH5UiPhoneNumber,YkjH5Cell, YkjH5ClipBoard, YkjH5PreviewPdf];
 // 定义install方法，接收Vue作为参数
 const install = function(Vue) {
   // 判断是否安装，安装过就不继续往下执行

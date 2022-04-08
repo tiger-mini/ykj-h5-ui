@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2288c3"],{da3c:function(e,n,t){"use strict";t.r(n);var c=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},l=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("section",[t("html",[t("head"),t("body",[t("h3",[e._v("写在前面")]),t("p",[e._v("该组件库主要是用来放一些云空间移动端的通用业务组件。")])])])])}],r=t("2877"),u={},a=Object(r["a"])(u,c,l,!1,null,null,null);n["default"]=a.exports}}]);
-//# sourceMappingURL=chunk-2d2288c3.92c58152.js.map

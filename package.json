@@ -21,8 +21,10 @@
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.7",
     "markdown-it-container": "^2.0.0",
+    "pdfjs-dist": "2.5.207",
     "transliteration": "^2.1.9",
     "vue": "^2.6.11",
+    "vue-pdf": "4.2.0",
     "vue-router": "^3.1.6"
   },
   "devDependencies": {

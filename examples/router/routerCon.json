@@ -30,8 +30,13 @@
         },
         {
           "path": "/ykjh5clipboard",
-          "name": "复制",
-          "title": "复制"
+          "name": "复制文本",
+          "title": "复制文本"
+        },
+        {
+          "path": "/ykjh5previewpdf",
+          "name": "PDF在线预览",
+          "title": "PDF在线预览"
         }
       ]
     }
