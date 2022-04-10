@@ -40,7 +40,7 @@ module.exports = {
   css: {
     sourceMap: true,
     extract: {
-      filename: '[name]/index.css'
+      filename: '[name]/style/index.css'
     }
   },
   configureWebpack: {
