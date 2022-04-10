@@ -40,7 +40,7 @@ module.exports = {
   css: {
     sourceMap: true,
     extract: {
-      filename: 'styles/[name].css'
+      filename: '[name]/index.css'
     }
   },
   configureWebpack: {
@@ -48,7 +48,7 @@ module.exports = {
       ...getEntries('packages'),
     },
     output: {
-      filename: '[name].js',
+      filename: '[name]/index.js',
       libraryTarget: 'umd'
     },
     externals: {
