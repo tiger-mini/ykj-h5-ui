@@ -40,7 +40,7 @@ module.exports = {
   css: {
     sourceMap: true,
     extract: {
-      filename: '[name]/style/index.css'
+      filename: 'style/[name].css'
     }
   },
   configureWebpack: {
@@ -160,7 +160,7 @@ module.exports = {
 
     config.optimization.delete('splitChunks')
     // config.plugins.delete('copy')
-    config.plugins.delete('html')
+    // config.plugins.delete('html')
     // config.plugins.delete('preload')
     // config.plugins.delete('prefetch')
     // config.plugins.delete('hmr')
