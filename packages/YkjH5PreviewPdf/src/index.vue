@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='preview-pdf-contain'>
     <pdf
       v-for='i in numPages'
       :key='i'
@@ -34,5 +34,7 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-//https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf
+.preview-pdf-contain{
+  background-color: red;
+}
 </style>
