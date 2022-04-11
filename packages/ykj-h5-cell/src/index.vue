@@ -1,11 +1,11 @@
 <template>
-  <div class='ykj-h5-cell' :class="bordered?'bordered':''">
-    <div class='title'>{{title}}</div>
-    <div class='content'>{{content}}<ykj-h5-ui-icon v-if='isLink' name='iconicn_xs_more' /></div>
+  <div class="ykj-h5-cell" :class="bordered?'bordered':''">
+    <div class="title">{{title}}</div>
+    <div class="content">{{content}}<ykj-h5-ui-icon v-if='isLink' name='iconicn_xs_more' /></div>
   </div>
 </template>
 <script>
-import YkjH5UiIcon from '../../YkjH5UiIcon/src/YkjH5UiIcon'
+import YkjH5UiIcon from '../../ykj-h5-ui-icon/src/YkjH5UiIcon'
 
 export default {
   name: "YkjH5Cell",
@@ -28,7 +28,7 @@ export default {
   }
 }
 </script>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .ykj-h5-cell {
   display: flex;
   flex-direction: row;

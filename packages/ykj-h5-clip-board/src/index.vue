@@ -7,7 +7,7 @@
   />
 </template>
 <script>
-import YkjH5UiIcon from '../../YkjH5UiIcon/src/YkjH5UiIcon'
+import YkjH5UiIcon from '../../ykj-h5-ui-icon/src/YkjH5UiIcon'
 
 export default {
   name: 'YkjH5ClipBoard',

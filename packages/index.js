@@ -1,9 +1,9 @@
-import YkjH5UiIcon from './YkjH5UiIcon/src/YkjH5UiIcon'
-import YkjH5UiCardInput from './YkjH5UiCardInput/src/YkjH5UiCardInput'
-import YkjH5UiPhoneNumber from './YkjH5UiPhoneNumber'
-import YkjH5Cell from './YkjH5Cell/index'
-import YkjH5ClipBoard from './YkjH5ClipBoard'
-import YkjH5PreviewPdf from './YkjH5PreviewPdf'
+import YkjH5UiIcon from './ykj-h5-ui-icon/src/YkjH5UiIcon'
+import YkjH5UiCardInput from './ykj-h5-ui-card-input/src/YkjH5UiCardInput'
+import YkjH5UiPhoneNumber from './ykj-h5-ui-phone-number'
+import YkjH5Cell from './ykj-h5-cell/index'
+import YkjH5ClipBoard from './ykj-h5-clip-board'
+import YkjH5PreviewPdf from './ykj-h5-preview-pdf'
 
 import './index.scss'
 
