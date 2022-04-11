@@ -1,14 +1,14 @@
 <template>
   <input
-    class='ykj-h5-ui-input'
-    v-model='number'
-    type='tel'
-    ref='mobile'
-    maxlength='13'
-    @input='onCallInput'
-    @keyup='onCallInput'
-    @paste='onCallInput'
-    placeholder='请输入手机号码'
+    class="ykj-h5-ui-input"
+    v-model="number"
+    type="tel"
+    ref="mobile"
+    maxlength="13"
+    @input="onCallInput"
+    @keyup="onCallInput"
+    @paste="onCallInput"
+    placeholder="请输入手机号码"
   />
 </template>
 
@@ -40,7 +40,6 @@ export default {
 }
 </script>
 
-<style scoped lang='scss'>
-@import '~/index.scss'
-
+<style scoped lang="scss">
+@import '~/index.scss';
 </style>

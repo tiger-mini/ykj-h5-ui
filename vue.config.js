@@ -1,28 +1,5 @@
-const fs = require('fs');
 const path = require('path')
-const join = path.join;
 const md = require('markdown-it')() // 引入markdown-it
-
-function resolve(dir) {
-  return path.resolve(__dirname, dir)
-}
-
-function getEntries(path) {
-  let files = fs.readdirSync(resolve(path));
-  const entries = files.reduce((ret, item) => {
-    const itemPath = join(path, item)
-    const isDir = fs.statSync(itemPath).isDirectory();
-    if (isDir) {
-      ret[item] = resolve(join(itemPath, 'index.js'))
-    } else {
-      const [name] = item.split('.')
-      ret[name] = resolve(`${itemPath}`)
-    }
-    return ret
-  }, {})
-  return entries
-}
-
 module.exports = {
   publicPath: './',
   // 修改 pages 入口
@@ -34,32 +11,6 @@ module.exports = {
     }
   },
   parallel: false,
-  outputDir: 'lib',
-  // source map
-  productionSourceMap: false,
-  css: {
-    sourceMap: true,
-    extract: {
-      filename: 'style/[name].css'
-    }
-  },
-  configureWebpack: {
-    entry: {
-      ...getEntries('packages'),
-    },
-    output: {
-      filename: '[name]/index.js',
-      libraryTarget: 'umd'
-    },
-    externals: {
-      vue: {
-        root: 'Vue',
-        commonjs: 'vue',
-        commonjs2: 'vue',
-        umd: 'vue'
-      }
-    },
-  },
   // 扩展 webpack 配置
   chainWebpack: config => {
     // @ 默认指向 src 目录，这里要改成 examples
@@ -156,14 +107,5 @@ module.exports = {
           [require('markdown-it-container'), 'warning']
         ]
       })
-
-
-    config.optimization.delete('splitChunks')
-    // config.plugins.delete('copy')
-    // config.plugins.delete('html')
-    // config.plugins.delete('preload')
-    // config.plugins.delete('prefetch')
-    // config.plugins.delete('hmr')
-    // config.entryPoints.delete('app')
   }
 }

@@ -1,6 +1,19 @@
 <template>
-  <span role='img' class='ykj-h5-ui-icon' :class='className' :title='title' :style='styleObj' @click='handleClick'>
-    <svg width='1em' height='1em' fill='currentColor' aria-hidden='true' focusable='false'>
+  <span
+    role="img"
+    class="ykj-h5-ui-icon"
+    :class="className"
+    :title="title"
+    :style="styleObj"
+    @click="handleClick"
+  >
+    <svg
+      width="1em"
+      height="1em"
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
       <use v-bind:xlink:href="getName(name)"></use>
     </svg>
   </span>
@@ -25,7 +38,7 @@ export default {
       require: false
     },
     title: {
-      type: String,
+      type: String
     },
     click: {
       type: Function
@@ -36,14 +49,14 @@ export default {
       return `#${iconName}`
     },
     handleClick() {
-      this.click && this.click();
+      this.click && this.click()
     }
   }
 }
 </script>
 
-<style lang='scss' scoped>
-.ykj-h5-ui-icon{
+<style lang="scss" scoped>
+.ykj-h5-ui-icon {
   display: inline-block;
   color: inherit;
   font-style: normal;

@@ -1,11 +1,6 @@
 <template>
-  <div class='preview-pdf-contain'>
-    <pdf
-      v-for='i in numPages'
-      :key='i'
-      :src='loadingTask'
-      :page='i'
-    ></pdf>
+  <div class="preview-pdf-contain">
+    <pdf v-for='i in numPages' :key='i' :src='loadingTask' :page='i'></pdf>
   </div>
 </template>
 <script>
@@ -16,7 +11,7 @@ export default {
   components: { pdf },
   data() {
     return {
-      loadingTask:pdf.createLoadingTask(this.src),
+      loadingTask: pdf.createLoadingTask(this.src),
       numPages: 0
     }
   },
@@ -33,8 +28,8 @@ export default {
   }
 }
 </script>
-<style lang='scss' scoped>
-.preview-pdf-contain{
+<style lang="scss" scoped>
+.preview-pdf-contain {
   background-color: red;
 }
 </style>

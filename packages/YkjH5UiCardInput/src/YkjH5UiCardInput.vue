@@ -1,12 +1,12 @@
 <template>
   <input
-    class='ykj-h5-ui-input'
-    v-model='card'
-    @input='onInput'
-    @keyup='onInput'
-    @paste='onInput'
-    type='text'
-    placeholder='请输入卡号'
+    class="ykj-h5-ui-input"
+    v-model="card"
+    @input="onInput"
+    @keyup="onInput"
+    @paste="onInput"
+    type="text"
+    placeholder="请输入卡号"
   />
 </template>
 
@@ -32,7 +32,6 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
-@import '~/index.scss'
-
+<style lang="scss" scoped>
+@import '~/index.scss';
 </style>
