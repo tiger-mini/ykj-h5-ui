@@ -1,0 +1,79 @@
+<template>
+  <span class="switch-box" @click='toggle'>
+    <input type="checkbox" class="switch" :checked='checked' />
+    <label></label>
+  </span>
+</template>
+<script>
+export default {
+  name: "YkjH5Switch",
+  data() {
+    return {
+      checked: false
+    }
+  },
+  props: {
+
+  },
+  methods: {
+    toggle() {
+      this.checked = !this.checked;
+      this.$emit('click', this.checked);
+    }
+  }
+}
+</script>
+<style lang='scss' scoped>
+/* CSS代码 */
+.switch-box {
+  width: 40px;
+  display: inline-block;
+}
+.switch-box .switch {
+  /* 隐藏checkbox默认样式 */
+  display: none;
+}
+.switch-box label {
+  /* 通过label扩大点击热区 */
+  position: relative;
+  display: block;
+  margin: 1px;
+  height: 20px;
+  cursor: pointer;
+}
+.switch-box label::before {
+  /* before设置前滚动小圆球 */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.06);
+  /* 通过transform、transition属性控制元素过渡进而形成css3动画 */
+  transform: translateX(-9px);
+  transition: all 0.3s ease;
+}
+.switch-box .switch:checked~label::before {
+  /* 语义：被选中的类名为"switch"元素后面的label元素里的伪类元素，进行更改css样式 */
+  /* 形成伪类结构选择器：":"冒号加布尔值"checked" */
+  /* " Ele1 ~ Ele2 "波浪号在css的作用：连接的元素必须有相同的父元素，选择出现在Ele1后的Ele2（但不必跟在Ele1，也就是说可以并列）  */
+  transform: translateX(9px);
+}
+.switch-box label::after {
+  /* after设置滚动前背景色 */
+  content: "";
+  display: block;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #dcdfe6;
+  transition: all 0.3s ease;
+}
+.switch-box .switch:checked~label::after {
+  background-color: #409eff;
+}
+</style>

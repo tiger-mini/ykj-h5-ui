@@ -32,6 +32,11 @@
           "path": "/ykjh5clipboard",
           "name": "复制文本",
           "title": "复制文本"
+        },
+        {
+          "path": "/ykjh5switch",
+          "name": "switch开关",
+          "title": "switch开关"
         }
       ]
     }

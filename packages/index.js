@@ -4,6 +4,7 @@ import YkjH5UiPhoneNumber from './ykj-h5-ui-phone-number'
 import YkjH5Cell from './ykj-h5-cell/index'
 import YkjH5ClipBoard from './ykj-h5-clip-board'
 import YkjH5PreviewPdf from './ykj-h5-preview-pdf'
+import YKjH5Switch from './ykj-h5-switch'
 
 import './index.scss'
 
@@ -14,7 +15,8 @@ const components = [
   YkjH5UiPhoneNumber,
   YkjH5Cell,
   YkjH5ClipBoard,
-  YkjH5PreviewPdf
+  YkjH5PreviewPdf,
+  YKjH5Switch
 ]
 // 定义install方法，接收Vue作为参数
 const install = function(Vue) {
